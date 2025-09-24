@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel ="stylesheet" href ="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1>To Do List</h1>
+            <section class = "task-input" aria-labelledby="task-label">
+                <label id="task-label" for="new-task">Ajouter une tâche : </label>
+                <input id="new-task" type="text" name="task" placeholder="Faire les courses"></br>
+                <button id="add-btn" type="button">Add</button>
+            </section>
+            
+            <section class="task-search">
+                <input id="search-task" type="text" placeholder="Rechercher une tâche..." />
+            </section>
+
+            <section id="list" aria-live="polite"> <!-- pour informer les changements --> 
+                <h2 class="sr-only">Liste des tâches</h2> <!-- contenus uniquement destinés aux lecteurs d écran -->
+                <ul id="tasks">
+                    </ul>
+            </section>
+
+            <section class="counters">
+            <p>Total : <span id="total-count">0</span></p>
+            <p>En cours : <span id="pending-count">0</span></p>
+            <p>Terminées : <span id="done-count">0</span></p>
+            </section>
+
+            <button id="clear-all" type="button" class="delete-all">Tout supprimer</button>
+        </main>
+        <script src ="script.js" ></script>
+    </body>
+</html>

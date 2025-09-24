@@ -1,0 +1,114 @@
+.container {
+  max-width: 520px;
+  margin: 48px auto;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(223, 161, 238, 0.9), rgba(223, 161, 238, 0.9));
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(8,12,24,0.08);
+}
+
+h1 {
+  margin: 0 0 18px 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  color: #210420;
+}
+
+.task-input {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+label {
+  min-width:110px;
+  font-size:0.95rem;
+  color:#666;
+}
+
+input[type="text"]{
+  flex:1;
+  padding:10px 12px;
+  border:1px solid #e3e6ef;
+  border-radius:10px;
+  font-size:0.95rem;
+  outline: none;
+  background: #ffffff;
+}
+
+input[type="text"]:focus{
+  box-shadow: 0 0 0 4px rgba(91,110,248,0.08);
+  border-color:#6f106a;
+}
+
+button#add-btn{
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  background:#6f106a;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .08s ease, box-shadow .08s ease;
+}
+
+button#add-btn:active { transform: translateY(1px); }
+button#add-btn:hover { box-shadow: 0 6px 18px rgba(201, 14, 129, 0.16); }
+
+/* liste des tâches */
+#tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tasks li{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 12px;
+  border-radius:10px;
+  background: #fbfdff;
+  border: 1px solid #6f106a;
+  font-size:0.95rem;
+}
+
+.task-text { color:#222; }
+
+/* petite classe pour lecteurs d'écran (visually hidden) */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Quand une tâche est terminée */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Boutons d'action */
+li button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.done-btn {
+  background: #49804b;
+  color: white;
+}
+
+.delete-btn {
+  background: #de7770;
+  color: white;
+}
